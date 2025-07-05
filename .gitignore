@@ -1,0 +1,411 @@
+# MISOGI Week 4 Assignment - Comprehensive .gitignore
+# Covers Discord MCP Server, Plagiarism Detector, and RAG Chunking Visualizer
+
+# ============================================================================
+# Python
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================================
+# UV Package Manager (used in Discord MCP Server)
+# ============================================================================
+.uv/
+uv.lock
+
+# ============================================================================
+# Environment Variables & Secrets
+# ============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+.envrc
+
+# API Keys and Secrets
+**/secrets/
+**/config/secrets.json
+**/config/production.json
+api_keys.txt
+secrets.txt
+
+# Discord Bot Tokens
+discord_token.txt
+bot_config.json
+
+# OpenAI API Keys
+openai_key.txt
+openai_config.json
+
+# ============================================================================
+# Streamlit (used in Plagiarism Detector & RAG Visualizer)
+# ============================================================================
+.streamlit/
+streamlit_config.toml
+
+# ============================================================================
+# Machine Learning & AI Models
+# ============================================================================
+# Hugging Face cache
+.cache/huggingface/
+transformers_cache/
+sentence_transformers_cache/
+
+# Model files (large binary files)
+*.bin
+*.safetensors
+*.h5
+*.pkl
+*.joblib
+*.model
+
+# Datasets
+datasets/
+data/raw/
+data/processed/
+*.csv
+*.tsv
+*.json
+*.jsonl
+*.parquet
+
+# Embeddings and vectors
+embeddings/
+vectors/
+*.npy
+*.npz
+
+# ============================================================================
+# PDF Processing (RAG Chunking Visualizer)
+# ============================================================================
+# Uploaded PDFs (don't commit user uploads)
+uploads/
+temp_pdfs/
+extracted_text/
+
+# PDF processing cache
+pdf_cache/
+text_cache/
+
+# ============================================================================
+# Logs & Monitoring
+# ============================================================================
+*.log
+logs/
+audit.log
+discord_mcp.log
+app.log
+error.log
+debug.log
+
+# MCP Server logs
+mcp_server.log
+mcp_debug.log
+
+# ============================================================================
+# Database Files
+# ============================================================================
+*.db
+*.sqlite
+*.sqlite3
+database.db
+test.db
+
+# ============================================================================
+# IDE & Editor Files
+# ============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================================================
+# Operating System Files
+# ============================================================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Temporary & Cache Files
+# ============================================================================
+tmp/
+temp/
+cache/
+.cache/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# ============================================================================
+# Project-Specific Ignores
+# ============================================================================
+
+# Discord MCP Server specific
+discord_bot_mcp/.uv/
+discord_bot_mcp/mcp_inspector_config_local.json
+discord_bot_mcp/test_results/
+
+# Plagiarism Detector specific
+plagiarism_detector/model_cache/
+plagiarism_detector/similarity_results/
+plagiarism_detector/uploaded_files/
+
+# RAG Chunking Visualizer specific
+rag_chunking_visualizer/uploaded_pdfs/
+rag_chunking_visualizer/chunking_results/
+rag_chunking_visualizer/visualization_cache/
+
+# ============================================================================
+# Documentation Build Files
+# ============================================================================
+docs/build/
+docs/_build/
+site/
+
+# ============================================================================
+# Package Manager Lock Files (optional - uncomment if needed)
+# ============================================================================
+# requirements.lock
+# Pipfile.lock
+# poetry.lock
+# package-lock.json
+# yarn.lock
+
+# ============================================================================
+# Large Files & Binaries
+# ============================================================================
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.dmg
+*.iso
+
+# Large model files
+*.onnx
+*.pb
+*.tflite
+
+# ============================================================================
+# Test Files & Coverage
+# ============================================================================
+test_results/
+test_outputs/
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+
+# ============================================================================
+# Deployment & Production
+# ============================================================================
+docker-compose.override.yml
+.dockerignore
+Dockerfile.local
+k8s/secrets/
+helm/values-local.yaml
+
+# ============================================================================
+# Miscellaneous
+# ============================================================================
+.DS_Store?
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
